@@ -23,3 +23,42 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+// function sendMail(){
+//     let params={
+//         name : document.getElementById("name").value,
+//         email : document.getElementById("email").value,
+//         subject : document.getElementById("subject").value,
+//         message : document.getElementById("message").value,
+//     }
+//     emailjs.send("service_4m79m9c","template_d6xd11u",params).then(alert("Email sent Successfully!!"))
+// }
+
+
+
+
+function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+
+    if (!params.name || !params.email || !params.subject || !params.message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    emailjs.send("service_4m79m9c", "template_d6xd11u", params)
+        .then(response => {
+            alert("Email sent successfully!");
+            console.log("Email sent:", response);
+            document.querySelector("form").reset();
+        })
+        .catch(error => {
+            alert("Failed to send email.");
+            console.error("Error sending email:", error);
+        });
+}
+

@@ -223,7 +223,7 @@ span{
     }
     61%,
     80%{
-        content:"ServiceNow Trainee";
+        content:"Full Stack Developer";
     }
     81%,
     100%{
@@ -235,7 +235,7 @@ span{
         width:0;
     }
     5%,20%,25%,40%,45%,60%,65%,80%,85%{
-        width:calc(100% + 8px);
+        width:calc(100% + 5px);
     }
 }
 
@@ -701,6 +701,16 @@ border-bottom: 3px solid var( --main-color);
     }
     .skills h2{
         margin-top: -10rem;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+    .projects .heading{
+        margin-top: -15rem;
+        font-size: 5rem;
+        margin-bottom: 10rem;
+    }
+    .contact h2{
+        margin-top: -7rem;
         font-size: 5rem;
         margin-bottom: 5rem;
     }
